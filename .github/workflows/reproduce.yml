@@ -1,0 +1,35 @@
+name: reproduce
+on:
+  push:
+  pull_request:
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+      - run: pip install -r requirements.txt
+      - name: Reproduce in pinned Python 3.9
+        run: ./reproduce.sh
+      - name: Save first-run hashes
+        run: |
+          sha256sum results/matrix.csv results/breaker_floor.csv results/signal_separation.csv FINAL-NUMBERS.json > /tmp/run1.sha256
+      - name: Repeat for deterministic byte check
+        run: |
+          ./reproduce.sh
+          sha256sum -c /tmp/run1.sha256
+      - name: Build clean container
+        run: docker build -t genai-failover-sim-repro .
+      - name: Network-disabled container reproduction
+        run: docker run --rm --network=none genai-failover-sim-repro
+      - uses: actions/upload-artifact@v4
+        with:
+          name: simulation-results
+          path: |
+            results/
+            FINAL-NUMBERS.md
+            FINAL-NUMBERS.json
+            FINAL-NUMBERS-FROZEN.json

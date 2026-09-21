@@ -10,7 +10,12 @@ A clean-room, discrete-event simulation of failover strategies for asynchronous,
 
 - [Read the technical report](paper/TECHNICAL-REPORT.md)
 - [Preprint on Zenodo](https://zenodo.org/records/22870512)
+- DOI: [10.5281/zenodo.22870512](https://doi.org/10.5281/zenodo.22870512)
 - Reproducibility commit: `4cd6ee1c5350f899681b8deed638ba3074a62fa7`
+
+### Citation
+
+Chen, Canjian. *When You Can't Just Retry: Designing Failover for Production Generative AI.* Independent Technical Report / Preprint, 2026. DOI: [10.5281/zenodo.22870512](https://doi.org/10.5281/zenodo.22870512).
 
 ## Reproduce
 

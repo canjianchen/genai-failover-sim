@@ -4,6 +4,13 @@ A clean-room, discrete-event simulation of failover strategies for asynchronous,
 
 **All results are synthetic. No production system, workload, customer data, or internal company metric is modeled or measured.**
 
+## Technical report
+
+**When You Can't Just Retry: Designing Failover for Production Generative AI** — Independent Technical Report / Preprint, September 21, 2026.
+
+- [Read the technical report](paper/TECHNICAL-REPORT.md)
+- Reproducibility commit: `4cd6ee1c5350f899681b8deed638ba3074a62fa7`
+
 ## Reproduce
 
 The reference environment is CPython 3.9. Run:

@@ -9,6 +9,7 @@ A clean-room, discrete-event simulation of failover strategies for asynchronous,
 **When You Can't Just Retry: Designing Failover for Production Generative AI** — Independent Technical Report / Preprint, September 21, 2026.
 
 - [Read the technical report](paper/TECHNICAL-REPORT.md)
+- [Preprint on Zenodo](https://zenodo.org/records/22870512)
 - Reproducibility commit: `4cd6ee1c5350f899681b8deed638ba3074a62fa7`
 
 ## Reproduce
